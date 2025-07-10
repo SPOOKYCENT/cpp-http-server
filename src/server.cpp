@@ -2,6 +2,7 @@
 #include <iostream>
 #include <unistd.h>
 #include <cstring>
+#include <sstream>
 #include <netinet/in.h>
 #include <sys/socket.h>
 
@@ -48,15 +49,49 @@ void HttpServer::start() {
         }
 
         char buffer[1024] = {0};
-        read(client_fd, buffer, sizeof(buffer));
-        std::cout << "📥 Received:\n" << buffer << std::endl;
+        ssize_t bytes_read = read(client_fd, buffer, sizeof(buffer));
+        if (bytes_read<=0) {
+            close(client_fd);
+            return;
+        }
+        std::string request(buffer);
+        std::cout << "📥 Received:\n" << request << std::endl;
+
+        size_t firstLineEnd = request.find("\r\n");
+        std::string firstLine = request.substr(0, firstLineEnd);
+
+        std::string method, path, httpVersion;
+        std::istringstream iss(firstLine);
+        iss >> method >> path >> httpVersion;
+
+        std::cout << "Method: " << method << ", Path: " << path << ", HTTP Version: " << httpVersion << std::endl;
+
+        std::string status_line_200 = "HTTP/1.1 200 OK\r\n";
+        std::string status_line_404 = "HTTP/1.1 404 Not Found\r\n";
+
+        std::string status_line, body;
+        if (path=="/") {
+            status_line = status_line_200;
+            body = "Welcome to the root!";
+        }
+        else if (path=="/hello") {
+            status_line = status_line_200;
+            body = "Hello!";
+        } 
+        else {
+            status_line = status_line_404;
+            body = "Unknown path: " + path;
+        }
+
 
         std::string response =
-            "HTTP/1.1 200 OK\r\n"
+            status_line +
             "Content-Type: text/plain\r\n"
-            "Content-Length: 13\r\n"
-            "\r\n"
-            "Hello, World!";
+            "Content-Length: " + std::to_string(body.size()) + "\r\n"
+            "\r\n" +
+            body;
+
+        std::cout << "📤 Sending:\n" << response << std::endl;
 
         send(client_fd, response.c_str(), response.length(), 0);
         close(client_fd);
