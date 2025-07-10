@@ -14,6 +14,9 @@ void HttpServer::setupSocket() {
         exit(EXIT_FAILURE);
     }
 
+    int opt = 1;
+    setsockopt(server_fd, SOL_SOCKET, SO_REUSEADDR, &opt, sizeof(opt));
+
     sockaddr_in address{};
     address.sin_family = AF_INET;
     address.sin_addr.s_addr = INADDR_ANY;
@@ -24,9 +27,38 @@ void HttpServer::setupSocket() {
         exit(EXIT_FAILURE);
     }
 
-    std::cout << "✅ Bound to port " << port << std::endl;
+    if (listen(server_fd, 5) < 0) {
+        perror("Listen failed");
+        exit(EXIT_FAILURE);
+    }
+
+    std::cout << "✅ Listening on port " << port << std::endl;
 }
 
 void HttpServer::start() {
     setupSocket();
+
+    while (true) {
+        sockaddr_in client_addr{};
+        socklen_t client_len = sizeof(client_addr);
+        int client_fd = accept(server_fd, (struct sockaddr*)&client_addr, &client_len);
+        if (client_fd < 0) {
+            perror("Accept failed");
+            continue;
+        }
+
+        char buffer[1024] = {0};
+        read(client_fd, buffer, sizeof(buffer));
+        std::cout << "📥 Received:\n" << buffer << std::endl;
+
+        std::string response =
+            "HTTP/1.1 200 OK\r\n"
+            "Content-Type: text/plain\r\n"
+            "Content-Length: 13\r\n"
+            "\r\n"
+            "Hello, World!";
+
+        send(client_fd, response.c_str(), response.length(), 0);
+        close(client_fd);
+    }
 }
