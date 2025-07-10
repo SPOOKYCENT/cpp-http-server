@@ -78,6 +78,11 @@ void HttpServer::start() {
             status_line = status_line_200;
             body = "Hello!";
         } 
+        else if (path.rfind("/echo/", 0)==0) {
+            status_line = status_line_200;
+            std::string toEcho = path.substr(6);
+            body = toEcho.empty() ? "Nothing to echo" : toEcho;
+        }
         else {
             status_line = status_line_404;
             body = "Unknown path: " + path;
