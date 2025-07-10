@@ -3,6 +3,7 @@
 #include <unistd.h>
 #include <cstring>
 #include <sstream>
+#include <map>
 #include <netinet/in.h>
 #include <sys/socket.h>
 
@@ -57,14 +58,36 @@ void HttpServer::start() {
         std::string request(buffer);
         std::cout << "📥 Received:\n" << request << std::endl;
 
-        size_t firstLineEnd = request.find("\r\n");
-        std::string firstLine = request.substr(0, firstLineEnd);
+        size_t first_line_end = request.find("\r\n");
+        std::string firstLine = request.substr(0, first_line_end);
 
-        std::string method, path, httpVersion;
+        std::string method, path, http_version;
         std::istringstream iss(firstLine);
-        iss >> method >> path >> httpVersion;
+        iss >> method >> path >> http_version;
 
-        std::cout << "Method: " << method << ", Path: " << path << ", HTTP Version: " << httpVersion << std::endl;
+        std::cout << "🔍 Method: " << method << ", Path: " << path << ", HTTP Version: " << http_version << std::endl;
+
+        std::map<std::string, std::string> headers;
+
+        size_t pos = request.find("\r\n") + 2;
+        while (pos<request.size()) {
+            size_t line_end = request.find("\r\n", pos);
+            if (line_end==std::string::npos || line_end==pos) break;
+
+            std::string line = request.substr(pos, line_end-pos);
+            size_t colon = line.find(":");
+            if (colon!=std::string::npos) {
+                std::string key = line.substr(0, colon);
+                std::string value = line.substr(colon+1);
+                value.erase(0, value.find_first_not_of(" \t"));
+                headers[key] = value;
+            }
+            pos = line_end+2;
+        }
+
+        std::cout << "📋 Headers:" << std::endl;
+        for (const auto& [key, value] : headers)
+            std::cout << "  " << key << ": " << value << std::endl;
 
         std::string status_line_200 = "HTTP/1.1 200 OK\r\n";
         std::string status_line_404 = "HTTP/1.1 404 Not Found\r\n";
