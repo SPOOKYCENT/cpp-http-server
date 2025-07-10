@@ -4,8 +4,10 @@
 #include <cstring>
 #include <sstream>
 #include <map>
+#include <thread>
 #include <netinet/in.h>
 #include <sys/socket.h>
+#include <arpa/inet.h>
 
 HttpServer::HttpServer(int port) : port(port), server_fd(-1) {}
 
@@ -49,7 +51,15 @@ void HttpServer::start() {
             continue;
         }
 
-        char buffer[1024] = {0};
+        char client_ip[INET_ADDRSTRLEN];
+        inet_ntop(AF_INET, &(client_addr.sin_addr), client_ip, INET_ADDRSTRLEN);
+
+        std::thread(&HttpServer::handleClient, this, client_fd, std::string(client_ip)).detach();
+    }
+}
+
+void HttpServer::handleClient(int client_fd, std::string client_ip) {
+    char buffer[1024] = {0};
         ssize_t bytes_read = read(client_fd, buffer, sizeof(buffer));
         if (bytes_read<=0) {
             close(client_fd);
@@ -111,6 +121,7 @@ void HttpServer::start() {
             body = "Unknown path: " + path;
         }
 
+        std::string status_code = status_line.substr(9, 3);
 
         std::string response =
             status_line +
@@ -121,7 +132,8 @@ void HttpServer::start() {
 
         std::cout << "📤 Sending:\n" << response << std::endl;
 
+        std::cout << client_ip << " --> " << status_code << std::endl;
+
         send(client_fd, response.c_str(), response.length(), 0);
         close(client_fd);
-    }
 }
