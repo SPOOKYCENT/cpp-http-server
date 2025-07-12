@@ -1,1 +1,1 @@
-/usr/bin/c++ CMakeFiles/http_server.dir/src/main.cpp.o CMakeFiles/http_server.dir/src/server.cpp.o -o http_server 
+/usr/bin/c++ CMakeFiles/http_server.dir/src/main.cpp.o CMakeFiles/http_server.dir/src/server.cpp.o CMakeFiles/http_server.dir/src/request.cpp.o CMakeFiles/http_server.dir/src/response.cpp.o CMakeFiles/http_server.dir/src/routes.cpp.o CMakeFiles/http_server.dir/src/core/router.cpp.o CMakeFiles/http_server.dir/src/views/views.cpp.o -o http_server 
