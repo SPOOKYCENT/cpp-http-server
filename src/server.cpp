@@ -63,22 +63,31 @@ void HttpServer::start() {
 }
 
 void HttpServer::handleClient(int client_fd, std::string client_ip) {
-    char buffer[1024] = {0};
-    ssize_t bytes_read = read(client_fd, buffer, sizeof(buffer));
-    if (bytes_read<=0) {
-        close(client_fd);
-        return;
+    while (true) {
+        char buffer[1024] = {0};
+        ssize_t bytes_read = read(client_fd, buffer, sizeof(buffer));
+        if (bytes_read<=0) break;
+        std::string raw_request(buffer);
+
+        std::cout << "Recieved:\n" << raw_request << std::endl;
+
+        HttpRequest request = HttpRequest::parse(raw_request, client_fd);
+        HttpResponse response = router.handle(request);
+
+        bool keep_connection_alive = true;
+        auto it = request.headers().find("Connection");
+        if (it!=request.headers().end() && it->second=="close") {
+            keep_connection_alive = false;
+            response.setHeader("Connection", "close");
+        }
+        else response.setHeader("Connection", "keep-alive");
+
+        std::string response_str = response.toString();
+        std::cout << "Sending:\n" << response_str << std::endl;
+
+        send(client_fd, response_str.c_str(), response_str.length(), 0);
+
+        if (!keep_connection_alive) break;
     }
-    std::string raw_request(buffer);
-
-    std::cout << "Recieved:\n" << raw_request << std::endl;
-
-    HttpRequest request = HttpRequest::parse(raw_request, client_fd);
-    HttpResponse response = router.handle(request);
-    std::string response_str = response.toString();
-
-    std::cout << "Sending:\n" << response_str << std::endl;
-
-    send(client_fd, response_str.c_str(), response_str.length(), 0);
     close(client_fd);
 }
