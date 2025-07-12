@@ -129,6 +129,78 @@ http_server/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/http_server.dir/build.make CMakeFiles/http_server.dir/build
 .PHONY : http_server/fast
 
+src/core/compression.o: src/core/compression.cpp.o
+.PHONY : src/core/compression.o
+
+# target to build an object file
+src/core/compression.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/http_server.dir/build.make CMakeFiles/http_server.dir/src/core/compression.cpp.o
+.PHONY : src/core/compression.cpp.o
+
+src/core/compression.i: src/core/compression.cpp.i
+.PHONY : src/core/compression.i
+
+# target to preprocess a source file
+src/core/compression.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/http_server.dir/build.make CMakeFiles/http_server.dir/src/core/compression.cpp.i
+.PHONY : src/core/compression.cpp.i
+
+src/core/compression.s: src/core/compression.cpp.s
+.PHONY : src/core/compression.s
+
+# target to generate assembly for a file
+src/core/compression.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/http_server.dir/build.make CMakeFiles/http_server.dir/src/core/compression.cpp.s
+.PHONY : src/core/compression.cpp.s
+
+src/core/request.o: src/core/request.cpp.o
+.PHONY : src/core/request.o
+
+# target to build an object file
+src/core/request.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/http_server.dir/build.make CMakeFiles/http_server.dir/src/core/request.cpp.o
+.PHONY : src/core/request.cpp.o
+
+src/core/request.i: src/core/request.cpp.i
+.PHONY : src/core/request.i
+
+# target to preprocess a source file
+src/core/request.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/http_server.dir/build.make CMakeFiles/http_server.dir/src/core/request.cpp.i
+.PHONY : src/core/request.cpp.i
+
+src/core/request.s: src/core/request.cpp.s
+.PHONY : src/core/request.s
+
+# target to generate assembly for a file
+src/core/request.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/http_server.dir/build.make CMakeFiles/http_server.dir/src/core/request.cpp.s
+.PHONY : src/core/request.cpp.s
+
+src/core/response.o: src/core/response.cpp.o
+.PHONY : src/core/response.o
+
+# target to build an object file
+src/core/response.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/http_server.dir/build.make CMakeFiles/http_server.dir/src/core/response.cpp.o
+.PHONY : src/core/response.cpp.o
+
+src/core/response.i: src/core/response.cpp.i
+.PHONY : src/core/response.i
+
+# target to preprocess a source file
+src/core/response.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/http_server.dir/build.make CMakeFiles/http_server.dir/src/core/response.cpp.i
+.PHONY : src/core/response.cpp.i
+
+src/core/response.s: src/core/response.cpp.s
+.PHONY : src/core/response.s
+
+# target to generate assembly for a file
+src/core/response.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/http_server.dir/build.make CMakeFiles/http_server.dir/src/core/response.cpp.s
+.PHONY : src/core/response.cpp.s
+
 src/core/router.o: src/core/router.cpp.o
 .PHONY : src/core/router.o
 
@@ -153,6 +225,30 @@ src/core/router.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/http_server.dir/build.make CMakeFiles/http_server.dir/src/core/router.cpp.s
 .PHONY : src/core/router.cpp.s
 
+src/core/routes.o: src/core/routes.cpp.o
+.PHONY : src/core/routes.o
+
+# target to build an object file
+src/core/routes.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/http_server.dir/build.make CMakeFiles/http_server.dir/src/core/routes.cpp.o
+.PHONY : src/core/routes.cpp.o
+
+src/core/routes.i: src/core/routes.cpp.i
+.PHONY : src/core/routes.i
+
+# target to preprocess a source file
+src/core/routes.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/http_server.dir/build.make CMakeFiles/http_server.dir/src/core/routes.cpp.i
+.PHONY : src/core/routes.cpp.i
+
+src/core/routes.s: src/core/routes.cpp.s
+.PHONY : src/core/routes.s
+
+# target to generate assembly for a file
+src/core/routes.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/http_server.dir/build.make CMakeFiles/http_server.dir/src/core/routes.cpp.s
+.PHONY : src/core/routes.cpp.s
+
 src/main.o: src/main.cpp.o
 .PHONY : src/main.o
 
@@ -176,78 +272,6 @@ src/main.s: src/main.cpp.s
 src/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/http_server.dir/build.make CMakeFiles/http_server.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
-
-src/request.o: src/request.cpp.o
-.PHONY : src/request.o
-
-# target to build an object file
-src/request.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/http_server.dir/build.make CMakeFiles/http_server.dir/src/request.cpp.o
-.PHONY : src/request.cpp.o
-
-src/request.i: src/request.cpp.i
-.PHONY : src/request.i
-
-# target to preprocess a source file
-src/request.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/http_server.dir/build.make CMakeFiles/http_server.dir/src/request.cpp.i
-.PHONY : src/request.cpp.i
-
-src/request.s: src/request.cpp.s
-.PHONY : src/request.s
-
-# target to generate assembly for a file
-src/request.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/http_server.dir/build.make CMakeFiles/http_server.dir/src/request.cpp.s
-.PHONY : src/request.cpp.s
-
-src/response.o: src/response.cpp.o
-.PHONY : src/response.o
-
-# target to build an object file
-src/response.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/http_server.dir/build.make CMakeFiles/http_server.dir/src/response.cpp.o
-.PHONY : src/response.cpp.o
-
-src/response.i: src/response.cpp.i
-.PHONY : src/response.i
-
-# target to preprocess a source file
-src/response.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/http_server.dir/build.make CMakeFiles/http_server.dir/src/response.cpp.i
-.PHONY : src/response.cpp.i
-
-src/response.s: src/response.cpp.s
-.PHONY : src/response.s
-
-# target to generate assembly for a file
-src/response.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/http_server.dir/build.make CMakeFiles/http_server.dir/src/response.cpp.s
-.PHONY : src/response.cpp.s
-
-src/routes.o: src/routes.cpp.o
-.PHONY : src/routes.o
-
-# target to build an object file
-src/routes.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/http_server.dir/build.make CMakeFiles/http_server.dir/src/routes.cpp.o
-.PHONY : src/routes.cpp.o
-
-src/routes.i: src/routes.cpp.i
-.PHONY : src/routes.i
-
-# target to preprocess a source file
-src/routes.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/http_server.dir/build.make CMakeFiles/http_server.dir/src/routes.cpp.i
-.PHONY : src/routes.cpp.i
-
-src/routes.s: src/routes.cpp.s
-.PHONY : src/routes.s
-
-# target to generate assembly for a file
-src/routes.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/http_server.dir/build.make CMakeFiles/http_server.dir/src/routes.cpp.s
-.PHONY : src/routes.cpp.s
 
 src/server.o: src/server.cpp.o
 .PHONY : src/server.o
@@ -306,21 +330,24 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... http_server"
+	@echo "... src/core/compression.o"
+	@echo "... src/core/compression.i"
+	@echo "... src/core/compression.s"
+	@echo "... src/core/request.o"
+	@echo "... src/core/request.i"
+	@echo "... src/core/request.s"
+	@echo "... src/core/response.o"
+	@echo "... src/core/response.i"
+	@echo "... src/core/response.s"
 	@echo "... src/core/router.o"
 	@echo "... src/core/router.i"
 	@echo "... src/core/router.s"
+	@echo "... src/core/routes.o"
+	@echo "... src/core/routes.i"
+	@echo "... src/core/routes.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
-	@echo "... src/request.o"
-	@echo "... src/request.i"
-	@echo "... src/request.s"
-	@echo "... src/response.o"
-	@echo "... src/response.i"
-	@echo "... src/response.s"
-	@echo "... src/routes.o"
-	@echo "... src/routes.i"
-	@echo "... src/routes.s"
 	@echo "... src/server.o"
 	@echo "... src/server.i"
 	@echo "... src/server.s"

@@ -97,47 +97,47 @@ CMakeFiles/http_server.dir/src/server.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/http_server.dir/src/server.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/spookycent/cpp-http-server/src/server.cpp -o CMakeFiles/http_server.dir/src/server.cpp.s
 
-CMakeFiles/http_server.dir/src/request.cpp.o: CMakeFiles/http_server.dir/flags.make
-CMakeFiles/http_server.dir/src/request.cpp.o: /home/spookycent/cpp-http-server/src/request.cpp
-CMakeFiles/http_server.dir/src/request.cpp.o: CMakeFiles/http_server.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/spookycent/cpp-http-server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/http_server.dir/src/request.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/http_server.dir/src/request.cpp.o -MF CMakeFiles/http_server.dir/src/request.cpp.o.d -o CMakeFiles/http_server.dir/src/request.cpp.o -c /home/spookycent/cpp-http-server/src/request.cpp
+CMakeFiles/http_server.dir/src/core/request.cpp.o: CMakeFiles/http_server.dir/flags.make
+CMakeFiles/http_server.dir/src/core/request.cpp.o: /home/spookycent/cpp-http-server/src/core/request.cpp
+CMakeFiles/http_server.dir/src/core/request.cpp.o: CMakeFiles/http_server.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/spookycent/cpp-http-server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/http_server.dir/src/core/request.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/http_server.dir/src/core/request.cpp.o -MF CMakeFiles/http_server.dir/src/core/request.cpp.o.d -o CMakeFiles/http_server.dir/src/core/request.cpp.o -c /home/spookycent/cpp-http-server/src/core/request.cpp
 
-CMakeFiles/http_server.dir/src/request.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/http_server.dir/src/request.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/spookycent/cpp-http-server/src/request.cpp > CMakeFiles/http_server.dir/src/request.cpp.i
+CMakeFiles/http_server.dir/src/core/request.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/http_server.dir/src/core/request.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/spookycent/cpp-http-server/src/core/request.cpp > CMakeFiles/http_server.dir/src/core/request.cpp.i
 
-CMakeFiles/http_server.dir/src/request.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/http_server.dir/src/request.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/spookycent/cpp-http-server/src/request.cpp -o CMakeFiles/http_server.dir/src/request.cpp.s
+CMakeFiles/http_server.dir/src/core/request.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/http_server.dir/src/core/request.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/spookycent/cpp-http-server/src/core/request.cpp -o CMakeFiles/http_server.dir/src/core/request.cpp.s
 
-CMakeFiles/http_server.dir/src/response.cpp.o: CMakeFiles/http_server.dir/flags.make
-CMakeFiles/http_server.dir/src/response.cpp.o: /home/spookycent/cpp-http-server/src/response.cpp
-CMakeFiles/http_server.dir/src/response.cpp.o: CMakeFiles/http_server.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/spookycent/cpp-http-server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/http_server.dir/src/response.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/http_server.dir/src/response.cpp.o -MF CMakeFiles/http_server.dir/src/response.cpp.o.d -o CMakeFiles/http_server.dir/src/response.cpp.o -c /home/spookycent/cpp-http-server/src/response.cpp
+CMakeFiles/http_server.dir/src/core/response.cpp.o: CMakeFiles/http_server.dir/flags.make
+CMakeFiles/http_server.dir/src/core/response.cpp.o: /home/spookycent/cpp-http-server/src/core/response.cpp
+CMakeFiles/http_server.dir/src/core/response.cpp.o: CMakeFiles/http_server.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/spookycent/cpp-http-server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/http_server.dir/src/core/response.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/http_server.dir/src/core/response.cpp.o -MF CMakeFiles/http_server.dir/src/core/response.cpp.o.d -o CMakeFiles/http_server.dir/src/core/response.cpp.o -c /home/spookycent/cpp-http-server/src/core/response.cpp
 
-CMakeFiles/http_server.dir/src/response.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/http_server.dir/src/response.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/spookycent/cpp-http-server/src/response.cpp > CMakeFiles/http_server.dir/src/response.cpp.i
+CMakeFiles/http_server.dir/src/core/response.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/http_server.dir/src/core/response.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/spookycent/cpp-http-server/src/core/response.cpp > CMakeFiles/http_server.dir/src/core/response.cpp.i
 
-CMakeFiles/http_server.dir/src/response.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/http_server.dir/src/response.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/spookycent/cpp-http-server/src/response.cpp -o CMakeFiles/http_server.dir/src/response.cpp.s
+CMakeFiles/http_server.dir/src/core/response.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/http_server.dir/src/core/response.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/spookycent/cpp-http-server/src/core/response.cpp -o CMakeFiles/http_server.dir/src/core/response.cpp.s
 
-CMakeFiles/http_server.dir/src/routes.cpp.o: CMakeFiles/http_server.dir/flags.make
-CMakeFiles/http_server.dir/src/routes.cpp.o: /home/spookycent/cpp-http-server/src/routes.cpp
-CMakeFiles/http_server.dir/src/routes.cpp.o: CMakeFiles/http_server.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/spookycent/cpp-http-server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/http_server.dir/src/routes.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/http_server.dir/src/routes.cpp.o -MF CMakeFiles/http_server.dir/src/routes.cpp.o.d -o CMakeFiles/http_server.dir/src/routes.cpp.o -c /home/spookycent/cpp-http-server/src/routes.cpp
+CMakeFiles/http_server.dir/src/core/routes.cpp.o: CMakeFiles/http_server.dir/flags.make
+CMakeFiles/http_server.dir/src/core/routes.cpp.o: /home/spookycent/cpp-http-server/src/core/routes.cpp
+CMakeFiles/http_server.dir/src/core/routes.cpp.o: CMakeFiles/http_server.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/spookycent/cpp-http-server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/http_server.dir/src/core/routes.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/http_server.dir/src/core/routes.cpp.o -MF CMakeFiles/http_server.dir/src/core/routes.cpp.o.d -o CMakeFiles/http_server.dir/src/core/routes.cpp.o -c /home/spookycent/cpp-http-server/src/core/routes.cpp
 
-CMakeFiles/http_server.dir/src/routes.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/http_server.dir/src/routes.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/spookycent/cpp-http-server/src/routes.cpp > CMakeFiles/http_server.dir/src/routes.cpp.i
+CMakeFiles/http_server.dir/src/core/routes.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/http_server.dir/src/core/routes.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/spookycent/cpp-http-server/src/core/routes.cpp > CMakeFiles/http_server.dir/src/core/routes.cpp.i
 
-CMakeFiles/http_server.dir/src/routes.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/http_server.dir/src/routes.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/spookycent/cpp-http-server/src/routes.cpp -o CMakeFiles/http_server.dir/src/routes.cpp.s
+CMakeFiles/http_server.dir/src/core/routes.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/http_server.dir/src/core/routes.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/spookycent/cpp-http-server/src/core/routes.cpp -o CMakeFiles/http_server.dir/src/core/routes.cpp.s
 
 CMakeFiles/http_server.dir/src/core/router.cpp.o: CMakeFiles/http_server.dir/flags.make
 CMakeFiles/http_server.dir/src/core/router.cpp.o: /home/spookycent/cpp-http-server/src/core/router.cpp
@@ -153,10 +153,24 @@ CMakeFiles/http_server.dir/src/core/router.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/http_server.dir/src/core/router.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/spookycent/cpp-http-server/src/core/router.cpp -o CMakeFiles/http_server.dir/src/core/router.cpp.s
 
+CMakeFiles/http_server.dir/src/core/compression.cpp.o: CMakeFiles/http_server.dir/flags.make
+CMakeFiles/http_server.dir/src/core/compression.cpp.o: /home/spookycent/cpp-http-server/src/core/compression.cpp
+CMakeFiles/http_server.dir/src/core/compression.cpp.o: CMakeFiles/http_server.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/spookycent/cpp-http-server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/http_server.dir/src/core/compression.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/http_server.dir/src/core/compression.cpp.o -MF CMakeFiles/http_server.dir/src/core/compression.cpp.o.d -o CMakeFiles/http_server.dir/src/core/compression.cpp.o -c /home/spookycent/cpp-http-server/src/core/compression.cpp
+
+CMakeFiles/http_server.dir/src/core/compression.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/http_server.dir/src/core/compression.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/spookycent/cpp-http-server/src/core/compression.cpp > CMakeFiles/http_server.dir/src/core/compression.cpp.i
+
+CMakeFiles/http_server.dir/src/core/compression.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/http_server.dir/src/core/compression.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/spookycent/cpp-http-server/src/core/compression.cpp -o CMakeFiles/http_server.dir/src/core/compression.cpp.s
+
 CMakeFiles/http_server.dir/src/views/views.cpp.o: CMakeFiles/http_server.dir/flags.make
 CMakeFiles/http_server.dir/src/views/views.cpp.o: /home/spookycent/cpp-http-server/src/views/views.cpp
 CMakeFiles/http_server.dir/src/views/views.cpp.o: CMakeFiles/http_server.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/spookycent/cpp-http-server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/http_server.dir/src/views/views.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/spookycent/cpp-http-server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/http_server.dir/src/views/views.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/http_server.dir/src/views/views.cpp.o -MF CMakeFiles/http_server.dir/src/views/views.cpp.o.d -o CMakeFiles/http_server.dir/src/views/views.cpp.o -c /home/spookycent/cpp-http-server/src/views/views.cpp
 
 CMakeFiles/http_server.dir/src/views/views.cpp.i: cmake_force
@@ -171,10 +185,11 @@ CMakeFiles/http_server.dir/src/views/views.cpp.s: cmake_force
 http_server_OBJECTS = \
 "CMakeFiles/http_server.dir/src/main.cpp.o" \
 "CMakeFiles/http_server.dir/src/server.cpp.o" \
-"CMakeFiles/http_server.dir/src/request.cpp.o" \
-"CMakeFiles/http_server.dir/src/response.cpp.o" \
-"CMakeFiles/http_server.dir/src/routes.cpp.o" \
+"CMakeFiles/http_server.dir/src/core/request.cpp.o" \
+"CMakeFiles/http_server.dir/src/core/response.cpp.o" \
+"CMakeFiles/http_server.dir/src/core/routes.cpp.o" \
 "CMakeFiles/http_server.dir/src/core/router.cpp.o" \
+"CMakeFiles/http_server.dir/src/core/compression.cpp.o" \
 "CMakeFiles/http_server.dir/src/views/views.cpp.o"
 
 # External object files for target http_server
@@ -182,14 +197,16 @@ http_server_EXTERNAL_OBJECTS =
 
 http_server: CMakeFiles/http_server.dir/src/main.cpp.o
 http_server: CMakeFiles/http_server.dir/src/server.cpp.o
-http_server: CMakeFiles/http_server.dir/src/request.cpp.o
-http_server: CMakeFiles/http_server.dir/src/response.cpp.o
-http_server: CMakeFiles/http_server.dir/src/routes.cpp.o
+http_server: CMakeFiles/http_server.dir/src/core/request.cpp.o
+http_server: CMakeFiles/http_server.dir/src/core/response.cpp.o
+http_server: CMakeFiles/http_server.dir/src/core/routes.cpp.o
 http_server: CMakeFiles/http_server.dir/src/core/router.cpp.o
+http_server: CMakeFiles/http_server.dir/src/core/compression.cpp.o
 http_server: CMakeFiles/http_server.dir/src/views/views.cpp.o
 http_server: CMakeFiles/http_server.dir/build.make
+http_server: /usr/lib/x86_64-linux-gnu/libz.so
 http_server: CMakeFiles/http_server.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/spookycent/cpp-http-server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable http_server"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/spookycent/cpp-http-server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX executable http_server"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/http_server.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

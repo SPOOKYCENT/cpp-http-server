@@ -1,7 +1,7 @@
 #pragma once
 
-#include "../request.hpp"
-#include "../response.hpp"
+#include "request.hpp"
+#include "response.hpp"
 
 class View {
 public:

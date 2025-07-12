@@ -11,6 +11,7 @@ public:
     void setBody(const std::string& body);
     int statusCode() const;
     std::string toString() const;
+    const std::string body() const;
 
 private:
     int m_status_code = 200;

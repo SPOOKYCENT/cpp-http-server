@@ -47,3 +47,5 @@ std::string HttpResponse::toString() const {
     res << "\r\n" << m_body;
     return res.str();
 }
+
+const std::string HttpResponse::body() const { return m_body; }

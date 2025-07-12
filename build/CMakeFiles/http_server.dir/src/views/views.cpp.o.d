@@ -3,7 +3,7 @@ CMakeFiles/http_server.dir/src/views/views.cpp.o: \
  /usr/include/stdc-predef.h \
  /home/spookycent/cpp-http-server/src/views/views.hpp \
  /home/spookycent/cpp-http-server/src/views/../core/view.hpp \
- /home/spookycent/cpp-http-server/src/views/../core/../request.hpp \
+ /home/spookycent/cpp-http-server/src/views/../core/request.hpp \
  /usr/include/c++/13/string /usr/include/c++/13/bits/requires_hosted.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/os_defines.h \
@@ -124,7 +124,7 @@ CMakeFiles/http_server.dir/src/views/views.cpp.o: \
  /usr/include/c++/13/bits/stl_map.h \
  /usr/include/c++/13/bits/stl_multimap.h \
  /usr/include/c++/13/bits/erase_if.h \
- /home/spookycent/cpp-http-server/src/views/../core/../response.hpp \
+ /home/spookycent/cpp-http-server/src/views/../core/response.hpp \
  /usr/include/c++/13/fstream /usr/include/c++/13/istream \
  /usr/include/c++/13/ios /usr/include/c++/13/exception \
  /usr/include/c++/13/bits/exception_ptr.h \

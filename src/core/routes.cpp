@@ -1,5 +1,5 @@
 #include "routes.hpp"
-#include "views/views.hpp"
+#include "../views/views.hpp"
 #include <memory>
 
 Router setupRouter() {

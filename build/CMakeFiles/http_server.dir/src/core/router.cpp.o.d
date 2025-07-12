@@ -2,7 +2,7 @@ CMakeFiles/http_server.dir/src/core/router.cpp.o: \
  /home/spookycent/cpp-http-server/src/core/router.cpp \
  /usr/include/stdc-predef.h \
  /home/spookycent/cpp-http-server/src/core/router.hpp \
- /home/spookycent/cpp-http-server/src/core/../request.hpp \
+ /home/spookycent/cpp-http-server/src/core/request.hpp \
  /usr/include/c++/13/string /usr/include/c++/13/bits/requires_hosted.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/os_defines.h \
@@ -123,7 +123,7 @@ CMakeFiles/http_server.dir/src/core/router.cpp.o: \
  /usr/include/c++/13/bits/stl_map.h \
  /usr/include/c++/13/bits/stl_multimap.h \
  /usr/include/c++/13/bits/erase_if.h \
- /home/spookycent/cpp-http-server/src/core/../response.hpp \
+ /home/spookycent/cpp-http-server/src/core/response.hpp \
  /home/spookycent/cpp-http-server/src/core/view.hpp \
  /usr/include/c++/13/memory /usr/include/c++/13/bits/stl_tempbuf.h \
  /usr/include/c++/13/bits/stl_uninitialized.h \
@@ -161,9 +161,10 @@ CMakeFiles/http_server.dir/src/core/router.cpp.o: \
  /usr/include/c++/13/bits/atomic_lockfree_defines.h \
  /usr/include/c++/13/backward/auto_ptr.h \
  /usr/include/c++/13/pstl/glue_memory_defs.h \
- /usr/include/c++/13/pstl/execution_defs.h /usr/include/c++/13/fstream \
- /usr/include/c++/13/istream /usr/include/c++/13/ios \
- /usr/include/c++/13/bits/ios_base.h \
+ /usr/include/c++/13/pstl/execution_defs.h \
+ /home/spookycent/cpp-http-server/src/core/compression.hpp \
+ /usr/include/c++/13/fstream /usr/include/c++/13/istream \
+ /usr/include/c++/13/ios /usr/include/c++/13/bits/ios_base.h \
  /usr/include/c++/13/bits/locale_classes.h \
  /usr/include/c++/13/bits/locale_classes.tcc \
  /usr/include/c++/13/system_error \

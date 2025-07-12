@@ -1,8 +1,8 @@
 #pragma once
 
 #include "../core/view.hpp"
-#include "../request.hpp"
-#include "../response.hpp"
+#include "../core/request.hpp"
+#include "../core/response.hpp"
 
 class RootView : public View {
 public:

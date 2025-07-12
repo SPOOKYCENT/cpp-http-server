@@ -1,6 +1,6 @@
 #include "server.hpp"
 #include "core/router.hpp"
-#include "routes.hpp"
+#include "core/routes.hpp"
 
 int main() {
     Router router = setupRouter();

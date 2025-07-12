@@ -1,6 +1,6 @@
 #include "server.hpp"
-#include "request.hpp"
-#include "response.hpp"
+#include "core/request.hpp"
+#include "core/response.hpp"
 #include <iostream>
 #include <unistd.h>
 #include <cstring>
@@ -71,9 +71,13 @@ void HttpServer::handleClient(int client_fd, std::string client_ip) {
     }
     std::string raw_request(buffer);
 
+    std::cout << "Recieved:\n" << raw_request << std::endl;
+
     HttpRequest request = HttpRequest::parse(raw_request, client_fd);
     HttpResponse response = router.handle(request);
     std::string response_str = response.toString();
+
+    std::cout << "Sending:\n" << response_str << std::endl;
 
     send(client_fd, response_str.c_str(), response_str.length(), 0);
     close(client_fd);
